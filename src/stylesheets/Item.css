@@ -1,0 +1,18 @@
+.price {
+    margin: 5px;
+    color: rgb(67, 8, 116);
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.image {
+    width: 254px;
+    height: 254px;
+}

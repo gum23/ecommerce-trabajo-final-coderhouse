@@ -1,20 +1,31 @@
-import { Container } from "react-bootstrap";
-import '../stylesheets/ItemListContainer.css';
-import imagen from '../images/proximamente.png'
+import { useState, useEffect } from 'react';
+import { ItemList } from './ItemList';
 
-export const ItemListContainer = (props) => {
+import data from '../data/products.json'; //Data
+
+
+export const ItemListContainer = () => {
+
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const promise = new Promise((res, rej) => {
+        setTimeout(() => { res(data) }, 2000)
+        })
+    
+    promise
+      .then((resp) => { setProducts(resp) })
+      .finally(() => setLoading(false))
+    
+    }, []);
+    console.log({products})
     return (
-        <>
-            <Container>
-                <div className="card" style={{width: "18rem"}}>
-                    <img src={imagen} className="card-img-top" alt="..." />
-                    <div className="card-body">
-                        <h5 className="card-title">{props.greeting}</h5>
-                        <p className="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia consequuntur voluptate quae voluptatum quidem laboriosam porro molestiae minima.</p>
-                        <a href="#" className="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </Container>
-        </>
+      <section>
+          <ItemList
+              products={products}
+              loading={loading}
+          />
+      </section>
     )
 }

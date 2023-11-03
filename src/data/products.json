@@ -1,52 +1,37 @@
 [
   {
     "id": 1,
-    "categoria": "super",
-    "marca": "Matarazzo",
-    "tipo": "fideos",
-    "variedad": "Codito",
-    "contenido": "500gr",
-    "Descripción": "",
-    "precio": 350
+    "title": "Fideos Mostacholes Matarazzo",
+    "description": "Fideos 100% harina candeal, gran aporte de fibra bajo en sodio y 0% colesterol",
+    "price": 350,
+    "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIMRyJUKWtGjltHs0EbLxllGJer-FSpgJ_6A"
   },
   {
     "id": 2,
-    "categoria": "super",
-    "marca": "Matarazzo",
-    "tipo": "fideos",
-    "variedad": "Tirabuzon",
-    "contenido": "500gr",
-    "Descripción": "",
-    "precio": 350
+    "title": "Fideos Tirabuzon Matarazzo",
+    "description": "Fideos 100% harina candeal, gran aporte de fibra bajo en sodio y 0% colesterol",
+    "price": 350,
+    "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIMRyJUKWtGjltHs0EbLxllGJer-FSpgJ_6A"
   },
   {
     "id": 3,
-    "categoria": "super",
-    "marca": "Cada dia",
-    "producto": "aceites",
-    "tipo": "Girasol",
-    "contenido": "900cc",
-    "Descripción": "",
-    "precio": 750
+    "title": "Aceite Cada Dia Girasol",
+    "descriptión": "",
+    "price": 750,
+    "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIMRyJUKWtGjltHs0EbLxllGJer-FSpgJ_6A"
   },
   {
     "id": 4,
-    "categoria": "super",
-    "marca": "Cocinero",
-    "producto": "aceites",
-    "tipo": "Oliva Extra Virgen",
-    "contenido": "500cc",
-    "Descripción": "",
-    "precio": 5000
+    "title": "Aceite Cocinero de Oliva",
+    "descriptión": "",
+    "price": 5000,
+    "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIMRyJUKWtGjltHs0EbLxllGJer-FSpgJ_6A"
   },
   {
     "id": 5,
-    "categoria": "super",
-    "marca": "Arcor",
-    "producto": "conservas",
-    "tipo": "Puré de tomate",
-    "contenido": "520gr",
-    "Descripción": "",
-    "precio": 500
+    "title": "Puré de Tomates Arcor",
+    "description": "",
+    "price": 500,
+    "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIMRyJUKWtGjltHs0EbLxllGJer-FSpgJ_6A"
   }
 ]
