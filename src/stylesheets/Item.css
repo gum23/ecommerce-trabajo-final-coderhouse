@@ -1,18 +1,26 @@
-.price {
-    margin: 5px;
-    color: rgb(67, 8, 116);
-    font-size: x-large;
-    font-weight: bold;
+#card {
+    margin: 10px;
+    background-color: #6c757d;
+    color: #fff;
 }
 
-.buttonContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+.card:hover {
+    box-shadow: 5px 5px 10px var(--bs-white);
 }
 
 .image {
     width: 254px;
     height: 254px;
+}
+.price {
+    margin: 5px;
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+}
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }

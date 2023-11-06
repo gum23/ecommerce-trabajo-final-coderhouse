@@ -11,7 +11,7 @@ export const ItemListContainer = () => {
 
     useEffect(() => {
         const promise = new Promise((res, rej) => {
-        setTimeout(() => { res(data) }, 2000)
+        setTimeout(() => { res(data) }, 3000)
         })
     
     promise

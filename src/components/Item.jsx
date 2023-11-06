@@ -4,7 +4,7 @@ import '../stylesheets/Item.css';
 export const MyItem = ({product}) => {
     
     return (
-        <Card style={{width:"18rem", padding:"1rem"}}>
+        <Card style={{width:"18rem", padding:"1rem"}} id="card">
             <Card.Img 
                 variant="top"
                 src={product.pictureUrl}
@@ -14,9 +14,6 @@ export const MyItem = ({product}) => {
                 <Card.Title>
                     {product.title}
                 </Card.Title>
-                <Card.Text>
-                    {product.description}
-                </Card.Text>
                 <CardFooter className="buttonContainer">
                     <Button href="#" variant="primary">Ver</Button>
                     <p className="price">$ {product.price}</p>

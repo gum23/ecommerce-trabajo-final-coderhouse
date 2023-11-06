@@ -3,35 +3,35 @@
     "id": 1,
     "title": "Fideos Mostacholes Matarazzo",
     "description": "Fideos 100% harina candeal, gran aporte de fibra bajo en sodio y 0% colesterol",
-    "price": 350,
-    "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIMRyJUKWtGjltHs0EbLxllGJer-FSpgJ_6A"
+    "price": 800,
+    "pictureUrl": "https://carrefourar.vtexassets.com/arquivos/ids/370669-800-auto?v=638297065514370000&width=800&height=auto&aspect=true"
   },
   {
     "id": 2,
     "title": "Fideos Tirabuzon Matarazzo",
     "description": "Fideos 100% harina candeal, gran aporte de fibra bajo en sodio y 0% colesterol",
-    "price": 350,
-    "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIMRyJUKWtGjltHs0EbLxllGJer-FSpgJ_6A"
+    "price": 800,
+    "pictureUrl": "https://carrefourar.vtexassets.com/arquivos/ids/408416-800-auto?v=638343782741970000&width=800&height=auto&aspect=true"
   },
   {
     "id": 3,
-    "title": "Aceite Cada Dia Girasol",
+    "title": "Aceite Cocinero Girasol",
     "descriptión": "",
-    "price": 750,
-    "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIMRyJUKWtGjltHs0EbLxllGJer-FSpgJ_6A"
+    "price": 890,
+    "pictureUrl": "https://carrefourar.vtexassets.com/arquivos/ids/155429-800-auto?v=637457062437730000&width=800&height=auto&aspect=true"
   },
   {
     "id": 4,
     "title": "Aceite Cocinero de Oliva",
     "descriptión": "",
-    "price": 5000,
-    "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIMRyJUKWtGjltHs0EbLxllGJer-FSpgJ_6A"
+    "price": 5300,
+    "pictureUrl": "https://carrefourar.vtexassets.com/arquivos/ids/204443-800-auto?v=637592983648570000&width=800&height=auto&aspect=true"
   },
   {
     "id": 5,
-    "title": "Puré de Tomates Arcor",
+    "title": "Puré de Tomates Canale",
     "description": "",
     "price": 500,
-    "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIMRyJUKWtGjltHs0EbLxllGJer-FSpgJ_6A"
+    "pictureUrl": "https://carrefourar.vtexassets.com/arquivos/ids/254760-800-auto?v=637974857905570000&width=800&height=auto&aspect=true"
   }
 ]
