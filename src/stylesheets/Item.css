@@ -1,6 +1,6 @@
 #card {
     margin: 10px;
-    background-color: #6c757d;
+    background-color: #212529;
     color: #fff;
 }
 
@@ -10,13 +10,14 @@
 
 .image {
     width: 254px;
-    height: 254px;
+    height: 320px;
 }
 .price {
     margin: 5px;
-    color: black;
     font-size: x-large;
     font-weight: bold;
+    width: 100%;
+        text-align: right;
 }
 .buttonContainer {
     display: flex;

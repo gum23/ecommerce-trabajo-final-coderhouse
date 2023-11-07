@@ -8,11 +8,12 @@ export const NavBar = () => {
         <header>
             <Navbar bg="dark" data-bs-theme="dark">
                 <Container>
-                    <Navbar.Brand href="#home">Tu Pedido</Navbar.Brand>
+                    <Navbar.Brand href="home">MusicArt</Navbar.Brand>
                         <Nav className="me-auto">
-                            <Nav.Link href="#super">Super</Nav.Link>
-                            <Nav.Link href="#limpieza">Limpieza</Nav.Link>
-                            <Nav.Link href="#perfumeria">Perfumería</Nav.Link>
+                            <Nav.Link href="cuerdas">Cuerdas</Nav.Link>
+                            <Nav.Link href="percucion">Percusion</Nav.Link>
+                            <Nav.Link href="vientos">Vientos</Nav.Link>
+                            <Nav.Link href="accesorios">Accesorios</Nav.Link>
                         </Nav>
                         <Nav>
                         <CartWidget />
