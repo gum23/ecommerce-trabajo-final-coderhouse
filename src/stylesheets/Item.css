@@ -2,6 +2,8 @@
     margin: 10px;
     background-color: #212529;
     color: #fff;
+    width: 18rem;
+        padding: 1rem;
 }
 
 .card:hover {

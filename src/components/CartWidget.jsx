@@ -1,6 +1,6 @@
 import React from 'react';
 import { Badge } from 'react-bootstrap';
-import '../stylesheets/CartWidget.css'
+import '../stylesheets/CartWidget.css';
 
 
 export const CartWidget = () => {

@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap";
 
 import { MyItem } from "./Item";
-import '../stylesheets/ItemList.css'
+import '../stylesheets/Loading.css';
 
 
 export const ItemList = ({ products, loading }) => {

@@ -1,31 +1,43 @@
 import { useState, useEffect } from 'react';
 import { ItemList } from './ItemList';
+import { useParams } from 'react-router-dom';
 
-import data from '../data/products.json'; //Data
+import data from '../data/products.json';
 
 
 export const ItemListContainer = () => {
 
-    const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(true);
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const { categoryId } = useParams();
 
-    useEffect(() => {
-        const promise = new Promise((res, rej) => {
-        setTimeout(() => { res(data) }, 3000)
-        })
-    
+  useEffect(() => {
+
+    const promise = new Promise((res, rej) => {
+          setTimeout(() => { res(data) }, 2000)
+          })
+        
     promise
-      .then((resp) => { setProducts(resp) })
+      .then((resp) => { 
+          if (categoryId) {
+            const productFilteredByCategory = data.filter(
+                  product => product.category === categoryId 
+                )
+            setProducts(productFilteredByCategory)
+          } else {
+            setProducts(resp)
+          }
+          })
       .finally(() => setLoading(false))
+
+  }, [categoryId]);
     
-    }, []);
-    console.log({products})
-    return (
-      <section>
-          <ItemList
-              products={products}
-              loading={loading}
-          />
-      </section>
-    )
+  return (
+    <section>
+        <ItemList
+            products={products}
+            loading={loading}
+        />
+    </section>
+  )
 }
