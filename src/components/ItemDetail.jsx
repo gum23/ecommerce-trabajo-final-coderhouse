@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 
-import { ItemCount } from "./ItemCount";
 import '../stylesheets/ItemDetail.css';
 
 export const ItemDetail = ({ product }) => {
@@ -23,7 +22,6 @@ export const ItemDetail = ({ product }) => {
                 </div>
                 <div className="container-price">
                     <p>$ {product.price}</p>
-                    <ItemCount stock={product.stock} onAdd={onAdd}/>
                 </div>
             </div>
         </div>
