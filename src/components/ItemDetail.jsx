@@ -1,15 +1,6 @@
-import { useState } from "react";
-
-
 import '../stylesheets/ItemDetail.css';
 
 export const ItemDetail = ({ product }) => {
-
-    const [add, setAdd] = useState(0);
-
-    function onAdd(count) {
-        setAdd(count)
-    }
 
     return (
         
