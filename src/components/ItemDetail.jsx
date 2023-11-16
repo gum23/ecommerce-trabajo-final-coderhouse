@@ -1,20 +1,31 @@
+import { useState } from "react";
+import { Card } from "react-bootstrap";
+
+import { ItemCount } from '../components/ItemCount';
 import '../stylesheets/ItemDetail.css';
 
 export const ItemDetail = ({ product }) => {
 
+    const [added, setAdded] = useState(0);
+
+    function onAdd(count) {
+        setAdded(count)
+    }
+
     return (
         
-        <div id="container">
-            <img src={product.pictureUrl} className="container-image"/>
-            <div className="container-description-price">
+        <Card id="containerDetail">
+            <Card.Img src={product.pictureUrl} className="image"/>
+            <div className="description-price">
                 <div className="container-description">
-                    <h1>{product.title}</h1>
-                    <p>{product.description}</p>
+                    <Card.Title className="title">{product.title}</Card.Title>
+                    <Card.Text className="description">{product.description}</Card.Text>
                 </div>
                 <div className="container-price">
                     <p>$ {product.price}</p>
+                    {added == 0 && <ItemCount stock={product.stock} onAdd={onAdd}/>}
                 </div>
             </div>
-        </div>
+        </Card>
     )
 }

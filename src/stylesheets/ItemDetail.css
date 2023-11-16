@@ -1,4 +1,4 @@
-#container {
+#containerDetail {
     width: 90%;
     height: max-content;
     border-radius: 12px;
@@ -9,31 +9,37 @@
     color: white;
 }
 
-.container-image {
-    width: 350px;
-    height: 450px;
+#containerDetail .image {
+    width: 300px;
+    height: 420px;
     border-radius: 8px;
     margin-top: 28px;
+    margin: 40px 80px 80px 80px;
 }
 
-.container-description-price {
-    width: max-content;
+#containerDetail .description-price {
+    width: 50%;
     border: white;
 }
 
 .container-description {
-    width: 450px;
+    width: 80%;
     height: 450px;
     text-align: left;
+    margin-left: 48px;
 }
 
 
-.container-description p {
+.container-description .title {
     margin-top: 28px;
-    font-size: 18px;
+    font-size: 36px;
     font-weight: 600;
 }
 
+.container-description .description {
+    font-size: 20px;
+    font-family: sans-serif;
+}
 .container-price {
     margin-top: 24px;
     margin-bottom: 12px;
