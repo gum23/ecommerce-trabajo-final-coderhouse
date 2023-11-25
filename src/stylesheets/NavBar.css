@@ -1,0 +1,14 @@
+.navbar-collapse .nav-item {
+    color: white;
+}
+
+@media(max-width: 991px) {
+    .navbar-collapse {
+        display: flex;
+    }
+
+    .navbar-collapse .me-auto {
+        display: flex;
+        flex-direction: column;
+    }
+}

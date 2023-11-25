@@ -14,30 +14,30 @@ export const ItemListContainer = () => {
   useEffect(() => {
 
     const promise = new Promise((res, rej) => {
-          setTimeout(() => { res(data) }, 2000)
-          })
+        setTimeout(() => { res(data) }, 2000)
+      })
         
     promise
       .then((resp) => { 
-          if (categoryId) {
-            const productFilteredByCategory = data.filter(
-                  product => product.category === categoryId 
-                )
-            setProducts(productFilteredByCategory)
-          } else {
-            setProducts(resp)
-          }
-          })
+        if (categoryId) {
+          const productFilteredByCategory = data.filter(
+            product => product.category === categoryId 
+          )
+          setProducts(productFilteredByCategory)
+        } else {
+          setProducts(resp)
+        }
+      })
       .finally(() => setLoading(false))
 
   }, [categoryId]);
     
   return (
     <section>
-        <ItemList
-            products={products}
-            loading={loading}
-        />
+      <ItemList
+        products={products}
+        loading={loading}
+      />
     </section>
   )
 }

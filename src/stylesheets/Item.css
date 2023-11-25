@@ -27,3 +27,7 @@
     justify-content: space-around;
     align-items: center;
 }
+.buttonContainer Button {
+    border: 1px solid white;
+    font-size: 90%;
+}
