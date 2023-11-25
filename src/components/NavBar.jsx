@@ -11,9 +11,9 @@ const uniqueCategories = new Set(categories);
 export const NavBar = () => {
   return (
     <header>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" style={{paddingLeft: "100px", paddingRight: "40px"}}>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary" id='navbar-order' data-bs-theme="dark">
         <div className="container-fluid">
-        <NavLink to="/" style={{textDecoration: "none"}}><Navbar.Brand>MusicArt</Navbar.Brand></NavLink>
+        <NavLink to="/" style={{textDecoration: "none"}}><Navbar.Brand className="commerce-name">MusicArt</Navbar.Brand></NavLink>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
