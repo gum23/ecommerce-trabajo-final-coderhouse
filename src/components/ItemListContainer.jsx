@@ -11,6 +11,7 @@ export const ItemListContainer = () => {
   const [loading, setLoading] = useState(true);
   const { categoryId } = useParams();
 
+
   useEffect(() => {
 
     const promise = new Promise((res, rej) => {
@@ -33,7 +34,7 @@ export const ItemListContainer = () => {
   }, [categoryId]);
     
   return (
-    <section>
+    <section >
       <ItemList
         products={products}
         loading={loading}

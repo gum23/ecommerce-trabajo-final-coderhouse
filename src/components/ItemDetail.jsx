@@ -1,16 +1,21 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import { ItemCount } from '../components/ItemCount';
+import { CartContext } from "../contexts/CartContext";
 import '../stylesheets/ItemDetail.css';
 
 export const ItemDetail = ({ product }) => {
 
   const [added, setAdded] = useState(0);
+  
+  const {addItem} = useContext(CartContext);
 
   function onAdd(count) {
-    setAdded(count)
+    setAdded(count);
+
+    addItem(product, count);
   }
 
   return (
@@ -27,7 +32,7 @@ export const ItemDetail = ({ product }) => {
           {added == 0 && <ItemCount stock={product.stock} onAdd={onAdd}/>}
           {added >= 1 && 
             <Link to={"/cart"}>
-              <Button id="terminar-compra" variant="dark">Terminar Compra</Button>
+              <Button id="terminar-compra" variant="dark" >Terminar Compra</Button>
             </Link>
           }
         </div>
