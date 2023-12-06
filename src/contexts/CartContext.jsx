@@ -8,23 +8,19 @@ export const CartProvider = ({children}) => {
   const clear = () => setItems([]);
 
   const addItem = (item, quantity) => {
-    const isAlredyAdded = isInCart(item)
+    const exists = isInCart(item)
 
-    if (isAlredyAdded) {
-      const productToModify = items.find(
+    if (exists) {
+      const itemToModify = items.find(
         (items) => items.id === item.id
       );
 
-      const productModified = {
-        ...productToModify,
-        quantity: productToModify.quantity + quantity,
+      const updateItem = {
+        ...itemToModify,
+        quantity: itemToModify.quantity + quantity,
       };
 
-      setItems((prev) =>
-        prev.map((items) =>
-          items.id === item.id ? productModified : items
-        )
-      );
+      setItems((prev) => prev.map((items) => items.id === item.id ? updateItem : items ));
 
     } else {
       setItems((prev) => {return prev.concat({...item, quantity})}) 
@@ -35,7 +31,11 @@ export const CartProvider = ({children}) => {
     return items.some((items) => items.id === item.id);
   }
 
+  const removeItem = (id) => {
+    const newItems = items.filter((prev) => prev.id !== id)
+    setItems(newItems);
+  }
 
-  return <CartContext.Provider value={{items, clear, addItem}}>{children}</CartContext.Provider>
+  return <CartContext.Provider value={{items, clear, addItem, removeItem}}>{children}</CartContext.Provider>
 
 }

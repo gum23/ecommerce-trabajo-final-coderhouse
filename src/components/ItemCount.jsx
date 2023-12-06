@@ -4,17 +4,17 @@ import {  Button } from 'react-bootstrap';
 
 import '../stylesheets/ItemCount.css';
 
-export const ItemCount = ({ stock, onAdd}) => {
+export const ItemCount = ({ stock, onAdd, initial}) => {
 
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(initial);
 
-  const handleSubtract = () => {
+  const handleDecrease = () => {
     setCount((prev) => prev - 1)
   }
-  const handleAdd = () => {
+  const handleIncrease = () => {
     setCount((prev) => prev + 1)
   }
-  const addCart = () => {
+  const handleAdd = () => {
     onAdd(count)
   }
 
@@ -22,11 +22,11 @@ export const ItemCount = ({ stock, onAdd}) => {
   return (
     <div id='containerCount'>
       <div className='containerControls'>
-        <Button className='decrement' variant="dark" disabled={count<2} onClick={handleSubtract} > - </Button>
+        <Button className='decrement' variant="dark" disabled={count<2} onClick={handleDecrease} > - </Button>
         <div className='counter'>{count}</div>
-        <Button className='increment' variant='dark' disabled={count === stock || stock == 0} onClick={handleAdd}>+</Button>
+        <Button className='increment' variant='dark' disabled={count === stock} onClick={handleIncrease}>+</Button>
       </div>
-      <Button id='addToCart' variant='dark' onClick={addCart}>Agreagr al Carrito</Button>
+      <Button id='addToCart' variant='dark' onClick={handleAdd}>Agreagr al Carrito</Button>
     </div>
   )
 }

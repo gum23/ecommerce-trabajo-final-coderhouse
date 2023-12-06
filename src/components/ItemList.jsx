@@ -1,13 +1,12 @@
-import { Container } from "react-bootstrap";
-
 import { MyItem } from "./Item";
 import { Loading } from "./Loading";
+import '../stylesheets/ItemList.css';
 
 
 export const ItemList = ({ products, loading }) => {
     
   return (
-    <Container className="d-flex flex-wrap mt-3">
+    <div className="products-container">
       { loading ? (
         <Loading />
       ) : (
@@ -17,6 +16,6 @@ export const ItemList = ({ products, loading }) => {
           product={product}
         />)
       ))}
-    </Container>
+    </div>
   )
 }

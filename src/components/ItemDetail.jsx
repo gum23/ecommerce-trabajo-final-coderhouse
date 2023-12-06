@@ -21,15 +21,18 @@ export const ItemDetail = ({ product }) => {
   return (
       
     <Card id="containerDetail">
-      <Card.Img src={product.pictureUrl} className="image"/>
+      <div id="image-container">
+        <Card.Img src={product.pictureUrl} className="image"/>
+      </div>
       <div className="description-price">
         <div className="container-description">
           <Card.Title className="title">{product.title}</Card.Title>
           <Card.Text className="description">{product.description}</Card.Text>
+          <p className="stock">Stock: {product.stock}</p>
         </div>
         <div className="container-price">
           <p>$ {product.price}</p>
-          {added == 0 && <ItemCount stock={product.stock} onAdd={onAdd}/>}
+          {added == 0 && <ItemCount stock={product.stock} onAdd={onAdd} initial={1}/>}
           {added >= 1 && 
             <Link to={"/cart"}>
               <Button id="terminar-compra" variant="dark" >Terminar Compra</Button>
