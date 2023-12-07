@@ -77,7 +77,7 @@
     justify-content: space-around;
 }
 
-.items-down-container Button {
+.items-down-container .button-empty-cart {
     border: 1px solid #fff;
 }
 
@@ -108,5 +108,25 @@
 
     .total-product {
         width: 90%;
+    }
+}
+
+@media (max-width: 506px) {
+
+    .items-down-container {
+        height: 150px;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 8px;   
+    }
+
+    .items-down-container .button-empty-cart {
+        width: 130px;
+        margin: 0 auto;
+    }
+
+    .items-down-container p {
+        text-align: center;
+        font-size: 20px;
     }
 }

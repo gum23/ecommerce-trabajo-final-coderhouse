@@ -60,4 +60,16 @@
     height: 58px;
     margin-top: 12px;
     font-size: 24px;
+    border: 1px solid #fff;
+}
+
+@media (max-width: 506px) {
+    .input-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-email {
+        margin-left: 0;
+    }
 }

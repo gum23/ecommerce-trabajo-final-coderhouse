@@ -49,7 +49,7 @@ export const ItemsCart = () => {
       ))}
 
       <div className="items-down-container">
-        <Button onClick={clear} variant="dark">Vaciar Carrito</Button>
+        <Button onClick={clear} variant="dark" className="button-empty-cart">Vaciar Carrito</Button>
         <p>Total compra: $ {total}</p>
       </div>
 
