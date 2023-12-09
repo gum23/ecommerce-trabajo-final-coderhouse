@@ -10,9 +10,9 @@ const clearBuyer = {name: "", phone: "", email: ""};
 
 const fechaYHora = moment();
 const fechaCompra = fechaYHora.format("DD-MM-YYYY");
-const horaCompra = fechaYHora.format("HH:mm:ss")
+const horaCompra = fechaYHora.format("HH:mm:ss");
 
-const date = { fecha: fechaCompra, hora: horaCompra }
+const date = { fecha: fechaCompra, hora: horaCompra };
 
 export const CheckOut = () => {
   const [buyer, setbuyer] = useState(clearBuyer);
@@ -35,7 +35,7 @@ export const CheckOut = () => {
       }
     }).finally(() => {setbuyer(clearBuyer), clear()});
 
-  }
+  };
   
   const handleChange = (ev) => {
     const {name, value} = ev.target;
@@ -53,17 +53,29 @@ export const CheckOut = () => {
         
         <div className="input-container">
           <label className="field-name">Nombre</label>
-          <input name="name" className="input" type="text" value={buyer.name} onChange={handleChange} required />
+          
+          <input name="name" className="input" 
+          type="text" value={buyer.name} 
+          onChange={handleChange} required />
+
         </div>
 
         <div className="input-container">
           <label className="field-name">Teléfono</label>
-          <input name="phone" className="input" type="text" value={buyer.phone} onChange={handleChange} required />
+          
+          <input name="phone" className="input" 
+          type="text" value={buyer.phone} 
+          onChange={handleChange} required />
+
         </div>
 
         <div className="input-container">
           <label className="field-name">Email</label>
-          <input name="email" className="input input-email" type="email" value={buyer.email} onChange={handleChange} required />
+          
+          <input name="email" className="input input-email" 
+          type="email" value={buyer.email} 
+          onChange={handleChange} required />
+
         </div>
 
       </form>

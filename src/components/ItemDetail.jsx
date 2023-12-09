@@ -20,7 +20,7 @@ export const ItemDetail = ({ product }) => {
 
   return (
       
-    <Card id="containerDetail">
+    <Card id="container-detail">
       <div id="image-container">
         <Card.Img src={product.pictureUrl} className="image"/>
       </div>

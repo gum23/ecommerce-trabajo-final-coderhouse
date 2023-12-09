@@ -28,8 +28,14 @@ export const NavBar = () => {
     <header>
       <nav className="navbar navbar-expand-lg bg-body-tertiary" id='navbar-order' data-bs-theme="dark">
         <div className="container-fluid">
-        <NavLink to="/" style={{textDecoration: "none"}}><Navbar.Brand className="commerce-name">MusicArt</Navbar.Brand></NavLink>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <NavLink to="/" className="link">
+            <Navbar.Brand className="commerce-name">MusicArt</Navbar.Brand>
+          </NavLink>
+
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" 
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+          aria-expanded="false" aria-label="Toggle navigation">
+            
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">

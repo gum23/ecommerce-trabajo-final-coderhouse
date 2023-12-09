@@ -39,12 +39,6 @@ export const ItemListContainer = () => {
 
   }, [categoryId]);
 
-  return (
-    <section >
-      <ItemList
-        products={products}
-        loading={loading}
-      />
-    </section>
-  )
+  return  <ItemList products={products} loading={loading} /> 
+  
 }

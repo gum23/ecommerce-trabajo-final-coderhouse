@@ -8,7 +8,7 @@ export const CartProvider = ({children}) => {
   const clear = () => setItems([]);
 
   const addItem = (item, quantity) => {
-    const exists = isInCart(item)
+    const exists = isInCart(item);
 
     if (exists) {
       const itemToModify = items.find(
@@ -23,7 +23,7 @@ export const CartProvider = ({children}) => {
       setItems((prev) => prev.map((items) => items.id === item.id ? updateItem : items ));
 
     } else {
-      setItems((prev) => {return prev.concat({...item, quantity})}) 
+      setItems((prev) => {return prev.concat({...item, quantity})}); 
     }
   }
 
@@ -32,7 +32,7 @@ export const CartProvider = ({children}) => {
   }
 
   const removeItem = (id) => {
-    const newItems = items.filter((prev) => prev.id !== id)
+    const newItems = items.filter((prev) => prev.id !== id);
     setItems(newItems);
   }
 

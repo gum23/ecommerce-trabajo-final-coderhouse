@@ -16,7 +16,7 @@ export const MyItem = ({product}) => {
         <Card.Title>
           {product.title}
         </Card.Title>
-        <CardFooter id="buttonContainer">
+        <CardFooter id="button-container">
           <Link to={`/products/${product.id}`}>
             <Button variant="dark">Ver</Button>
           </Link>

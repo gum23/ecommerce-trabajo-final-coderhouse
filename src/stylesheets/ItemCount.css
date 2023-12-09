@@ -1,4 +1,4 @@
-#containerCount {
+#container-count {
     width: max-content;
     height: 40px;
     display: flex;
@@ -6,7 +6,7 @@
     margin: 0;
 }
 
-.containerControls {
+.container-controls {
     width: 120px;
     border: none;
     display: flex;
@@ -14,26 +14,26 @@
     align-items: center;
 }
 
-.containerControls .counter {
+.container-controls .counter {
     width: 20px;
     text-align: center;
 }
 
-.containerControls .decrement {
+.container-controls .decrement {
     width: 40px;
     height: 40px;
     border: 1px solid white;
     border-radius: 8px 0 0 8px;
 }
 
-.containerControls .increment {
+.container-controls .increment {
     width: 40px;
     height: 40px;
     border: 1px solid white;
     border-radius: 0 8px 8px 0;
 }
 
-#addToCart {
+#add-to-cart {
     width: 160px;
     height: 40px;
     border: 1px solid white;

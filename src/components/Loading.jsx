@@ -1,5 +1,3 @@
-import { Container } from 'react-bootstrap';
-
 import '../stylesheets/Loading.css';
 
 export const Loading = () => {

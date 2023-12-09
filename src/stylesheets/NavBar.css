@@ -10,6 +10,10 @@
     font-size: 32px;
 }
 
+.container-fluid .link{
+    text-decoration: none;
+}
+
 .navbar-collapse .me-auto {
     font-size: 20px;
 }

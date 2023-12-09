@@ -31,7 +31,7 @@ export const ItemDetailContainer = () => {
   
   return (
     <Container className="d-flex flex-wrap mt-3">
-      {loading ? <Loading /> : <ItemDetail product={productId} />}
+      {loading ? <Loading /> : <ItemDetail product={ productId } />}
     </Container>
   )
 }

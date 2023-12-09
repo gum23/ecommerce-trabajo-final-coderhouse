@@ -73,3 +73,9 @@
         margin-left: 0;
     }
 }
+
+@media (max-width: 400px) {
+    .form {
+        padding: 0;
+    }
+}

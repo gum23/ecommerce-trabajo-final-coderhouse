@@ -2,7 +2,7 @@ html {
     padding-bottom: 80px;
 }
 
-#containerDetail {
+#container-detail {
     width: max-content;
     padding: 10px;
     border-radius: 12px;
@@ -29,7 +29,7 @@ html {
     border-radius: 8px;
 }
 
-#containerDetail .description-price {
+#container-detail .description-price {
     width: 50%;
     border: white;
 }
@@ -91,7 +91,7 @@ html {
 
 @media (max-width: 1200px) {
 
-  #containerDetail {
+  #container-detail {
         height: max-content;
     }
 
@@ -106,20 +106,20 @@ html {
         margin: 20px;
     }
 
-    #containerDetail .description-price {
+    #container-detail .description-price {
         width: 80%;
     }
 
 }
 
 @media (max-width: 991px) {
-    #containerDetail{
+    #container-detail{
         width: 90%;
         margin: 0 auto;
         flex-wrap: wrap;
     }
 
-    #containerDetail .description-price {
+    #container-detail .description-price {
         width: 100%;
         height: 100%;
     }
