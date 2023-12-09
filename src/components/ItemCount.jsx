@@ -10,10 +10,12 @@ export const ItemCount = ({ stock, onAdd, initial}) => {
 
   const handleDecrease = () => {
     setCount((prev) => prev - 1);
-  }
+  };
+
   const handleIncrease = () => {
     setCount((prev) => prev + 1);
-  }
+  };
+
   const handleAdd = () => {
     
     if (stock >= initial) {
@@ -21,10 +23,8 @@ export const ItemCount = ({ stock, onAdd, initial}) => {
     } else {
       alert("Este producto no está disponible!!");
     }
-
-
     
-  }
+  };
 
 
   return (
