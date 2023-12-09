@@ -49,7 +49,7 @@ export const CheckOut = () => {
   return (
     <div className="form-container">
       <h2 className="subtitle">Datos Comprador</h2>
-      <form className="form">
+      <form className="form" onSubmit={handleSendOrder}>
         
         <div className="input-container">
           <label className="field-name">Nombre</label>
@@ -78,10 +78,10 @@ export const CheckOut = () => {
 
         </div>
 
+        <div className="button-container">
+          <Button type="submit" className="submit" variant="dark" >Enviar</Button>
+        </div>
       </form>
-      <div className="button-container">
-        <Button className="submit" variant="dark" onClick={handleSendOrder}>Enviar</Button>
-      </div>
     </div>
   )
 }
