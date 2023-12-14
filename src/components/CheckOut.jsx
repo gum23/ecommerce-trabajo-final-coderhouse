@@ -1,10 +1,12 @@
 import { Button } from "react-bootstrap";
 import { useContext, useState } from "react";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { Link } from "react-router-dom";
 import moment from "moment";
 
 import { CartContext } from "../contexts/CartContext";
 import '../stylesheets/CheckOut.css';
+import { BackToBuy } from "./BackToBuy";
 
 const clearBuyer = {name: "", phone: "", email: ""};
 
@@ -79,7 +81,9 @@ export const CheckOut = () => {
         </div>
 
         <div className="button-container">
-          <Button type="submit" className="submit" variant="dark" >Enviar</Button>
+          <Link to={<BackToBuy />}>
+            <Button className="submit" variant="dark" >Enviar</Button>
+          </Link>
         </div>
       </form>
     </div>
