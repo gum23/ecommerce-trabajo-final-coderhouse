@@ -1,12 +1,10 @@
 import { Button } from "react-bootstrap";
 import { useContext, useState } from "react";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
-import { Link } from "react-router-dom";
 import moment from "moment";
 
 import { CartContext } from "../contexts/CartContext";
 import '../stylesheets/CheckOut.css';
-import { BackToBuy } from "./BackToBuy";
 
 const clearBuyer = {name: "", phone: "", email: ""};
 
@@ -17,7 +15,7 @@ const horaCompra = fechaYHora.format("HH:mm:ss");
 const date = { fecha: fechaCompra, hora: horaCompra };
 
 export const CheckOut = () => {
-  const [buyer, setbuyer] = useState(clearBuyer);
+  const [buyer, setBuyer] = useState(clearBuyer);
   const { items, clear } = useContext(CartContext);
 
   const total = items.reduce((acumulado, actual) => {
@@ -28,21 +26,21 @@ export const CheckOut = () => {
     const order = { buyer, items, date, total };
 
     const db = getFirestore();
-
-    const orderCollection = collection(db, "order");
-
-    addDoc(orderCollection, order).then((id) => {
+    
+    const orderCollection = collection(db, "orders");
+    
+    addDoc(orderCollection, order).then(({id}) => {
       if (id) {
         alert(`Su orden: ${id} ha sido completada!`);
       }
-    }).finally(() => {setbuyer(clearBuyer), clear()});
+    }).finally(() => {setBuyer(clearBuyer), clear()});
 
   };
   
   const handleChange = (ev) => {
     const {name, value} = ev.target;
 
-    setbuyer(prev => {
+    setBuyer(prev => {
       return{...prev, [name]: value};
     });
 
@@ -51,7 +49,7 @@ export const CheckOut = () => {
   return (
     <div className="form-container">
       <h2 className="subtitle">Datos Comprador</h2>
-      <form className="form" onSubmit={handleSendOrder}>
+      <form className="form" >
         
         <div className="input-container">
           <label className="field-name">Nombre</label>
@@ -81,9 +79,7 @@ export const CheckOut = () => {
         </div>
 
         <div className="button-container">
-          <Link to={<BackToBuy />}>
-            <Button className="submit" variant="dark" >Enviar</Button>
-          </Link>
+          <Button className="submit" variant="dark" onClick={handleSendOrder} >Enviar</Button>
         </div>
       </form>
     </div>

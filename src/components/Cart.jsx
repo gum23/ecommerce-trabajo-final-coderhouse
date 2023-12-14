@@ -16,7 +16,6 @@ export const Cart = () => {
     <>
       <ItemsCart />
       <CheckOut />
-
     </>
   )
 }
