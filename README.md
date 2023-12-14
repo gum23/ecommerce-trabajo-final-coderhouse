@@ -1,8 +1,4 @@
-# React + Vite
+# La presente App web fue desarrollada con vite/react.js. Se trata de un e-commerce de venta de instrumentos musicales
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Una vez clonado el repo debe instalar las dependencias de lista package.json con el comando npm install
+# Para inicializar el servidor de desarrollo, debe ingresar en el terminal el comando npm run dev
