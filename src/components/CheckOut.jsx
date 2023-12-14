@@ -22,7 +22,9 @@ export const CheckOut = () => {
     return acumulado + actual.price * actual.quantity
   }, 0);
 
-  const handleSendOrder = () => {
+  const handleSendOrder = (e) => {
+    e.preventDefault();
+
     const order = { buyer, items, date, total };
 
     const db = getFirestore();
@@ -49,7 +51,7 @@ export const CheckOut = () => {
   return (
     <div className="form-container">
       <h2 className="subtitle">Datos Comprador</h2>
-      <form className="form" >
+      <form className="form" onSubmit={(e) => handleSendOrder(e)}>
         
         <div className="input-container">
           <label className="field-name">Nombre</label>
@@ -79,7 +81,7 @@ export const CheckOut = () => {
         </div>
 
         <div className="button-container">
-          <Button className="submit" variant="dark" onClick={handleSendOrder} >Enviar</Button>
+          <Button type="submit" className="submit" variant="dark" >Enviar</Button>
         </div>
       </form>
     </div>
